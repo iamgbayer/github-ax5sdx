@@ -1,10 +1,12 @@
 {
-  "name": "module-federation",
+  "name": "poc",
   "private": true,
   "workspaces": {
     "packages": [
-      "app1",
-      "app2"
+      "shell",
+      "creators",
+      "members",
+      "common"
     ]
   },
   "scripts": {
