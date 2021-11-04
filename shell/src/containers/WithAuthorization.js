@@ -9,7 +9,7 @@ export const WithAuthorization = ({ children }) => {
   useEffect(() => {
     const isAlreadyLoadedAndIsUnauthenticated = !initializing && !user;
 
-    isAlreadyLoadedAndIsUnauthenticated && history.push();
+    isAlreadyLoadedAndIsUnauthenticated && history.push("/signin");
   }, [user, initializing]);
 
   if (initializing) {
