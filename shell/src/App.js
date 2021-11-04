@@ -4,6 +4,7 @@ import { firebase } from "@poc/common";
 
 import { SignIn, Signup } from "./pages";
 import { WithAuthorization } from "./containers";
+import { Header } from "./components";
 
 const Creators = React.lazy(() => import("creators/App"));
 const Members = React.lazy(() => import("members/App"));
@@ -17,6 +18,8 @@ const App = () => {
           <Route exact path="/signup" component={Signup} />
 
           <WithAuthorization>
+            <Header />
+
             <Route exact path="/" component={Members} />
             <Route exact path="/creators" component={Creators} />
           </WithAuthorization>
