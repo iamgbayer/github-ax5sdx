@@ -33,9 +33,14 @@ module.exports = {
         "./App": "./src/App",
       },
       shared: {
-        react: { singleton: true },
-        "react-dom": { singleton: true },
-        firebase: { singleton: true },
+        "react-router-dom": {
+          singleton: true,
+          eager: true,
+          version: deps["react-router-dom"],
+        },
+        react: { singleton: true, eager: true },
+        "react-dom": { singleton: true, eager: true },
+        firebase: { singleton: true, eager: true },
       },
     }),
     new HtmlWebpackPlugin({
