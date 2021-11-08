@@ -36,6 +36,10 @@ export const SignIn = () => {
       >
         sign in
       </button>
+
+      <br/>
+
+      <button onClick={() => history.push('/signup')}>does not have an account?</button>
     </>
   );
 };
